@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import RollButton from './RollButton';
 
-class DiceMat extends Component {
+class DiceMat extends React.Component {
+
   render() {
     return (
       <div>
-
+        <RollButton></RollButton>
       </div>
     );
   }

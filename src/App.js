@@ -29,9 +29,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className='App-header-footer'>1 - 4 - 24</header>
-        <PlayerSelect selectPlayer={this.selectPlayer}></PlayerSelect>
-        <DiceMat></DiceMat>
-        <ScoreTable></ScoreTable>
+        {this.state.players ?   
+          <DiceMat key='3'></DiceMat>
+          :
+          <PlayerSelect key='2' selectPlayer={this.selectPlayer}></PlayerSelect>
+        }
+        <ScoreTable key='1' test="test" players={this.state.players}></ScoreTable>
       </div>
     );
   }
