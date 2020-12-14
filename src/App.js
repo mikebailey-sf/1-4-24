@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import DiceMat from './components/DiceMat';
+import PlayerSelect from './components/PlayerSelect';
+import ScoreTable from './components/ScoreTable';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(){
+    super();
+    //Initializatin goes here
+  }
+
+  selectPlayer(){
+    console.log("out here");
+  }
+  render(){
+    return (
+      <div className="App">
+        <header className='App-header-footer'>1 - 4 - 24</header>
+        <PlayerSelect selectPlayer={this.selectPlayer}></PlayerSelect>
+        <DiceMat></DiceMat>
+        <ScoreTable></ScoreTable>
+      </div>
+    );
+  }
 }
 
 export default App;
