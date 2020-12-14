@@ -7,12 +7,24 @@ import './App.css';
 class App extends React.Component {
   constructor(){
     super();
+    this.state = this.getInitialState();
+    this.selectPlayer = this.selectPlayer.bind(this);
     //Initializatin goes here
   }
 
-  selectPlayer(){
-    console.log("out here");
+  getInitialState(){
+    return {
+      players: 0
+    };
   }
+
+  selectPlayer(e){
+    this.setState({
+      players: e.target.value
+    });
+
+  }
+
   render(){
     return (
       <div className="App">
