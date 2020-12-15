@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RollButton = () => {
+const RollButton = (props) => {
   return (
-    <button>Roll</button>
+    <button onClick={props.rollAll}>Roll</button>
   );
 };
 
